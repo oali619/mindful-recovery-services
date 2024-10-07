@@ -14,8 +14,8 @@ export async function action({ request }: ActionFunctionArgs) {
 	const resend = new Resend(process.env.RESEND_API_KEY);
 
 	const response = await resend.emails.send({
-		from: 'admin@mindfulhealthmn.org',
-		to: 'contact@mindfulhealthmn.org',
+		// from: 'admin@mindfulhealthmn.org',
+		// to: 'contact@mindfulhealthmn.org',
 		subject: 'New Contact Form Submission',
 		react: <EmailTemplate options={data} />,
 	});

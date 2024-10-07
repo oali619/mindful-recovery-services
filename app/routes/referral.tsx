@@ -44,8 +44,8 @@ export async function action({ request }: ActionFunctionArgs) {
 	console.log({ data });
 	const resend = new Resend(process.env.RESEND_API_KEY);
 	const response = await resend.emails.send({
-		from: 'admin@mindfulhealthmn.org',
-		to: 'referral@mindfulhealthmn.org',
+		// from: 'admin@mindfulhealthmn.org',
+		// to: 'referral@mindfulhealthmn.org',
 		subject: `New Referral - ${data.clientName}`,
 		react: <EmailTemplate options={data} referral={true} />,
 		attachments: file.size
