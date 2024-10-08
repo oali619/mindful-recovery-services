@@ -1,6 +1,6 @@
 import puzzleBrain from './puzzle-brain.png';
 import therapy from './therapy.png';
-import dhsImage from './245D-image.jpeg';
+import assistedLiving from './assisted-living.jpg';
 import mission1 from './mission1.jpeg';
 import mission2 from './mission2.jpeg';
 import mission3 from './mission3.jpeg';
@@ -15,7 +15,7 @@ export {
 	helpingHand,
 	housing,
 	love,
-	dhsImage,
+	assistedLiving,
 	mission1,
 	mission2,
 	mission3,

@@ -1,4 +1,4 @@
-import { dhsImage, helpingHand, housing } from '../images';
+import { assistedLiving, helpingHand, housing } from '../images';
 
 export const navigation = [
 	{ name: 'Home', to: '/', current: true },
@@ -6,7 +6,7 @@ export const navigation = [
 	// { name: 'Success Stories', current: false, to: '/#successStories' },
 	{ name: 'Referral', to: '/referral', current: false },
 	{ name: 'Team', to: '/team', current: false },
-	{ name: 'Contact', to: '/contact', current: false },
+	// { name: 'Contact', to: '/contact', current: false },
 ];
 
 export const services = [
@@ -27,7 +27,7 @@ export const services = [
 	{
 		name: 'Assisted Living Services',
 		description: 'coming soon',
-		imageSrc: dhsImage,
+		imageSrc: assistedLiving,
 		imageAlt: 'Case Manager providing in home care to elderly client',
 		href: '/',
 	},
@@ -59,7 +59,6 @@ export const values = [
 		description:
 			'We are committed to protecting the confidentiality and privacy of our clients, ensuring their information is secure and respected.',
 	},
-
 ];
 
 export const testimonials = [
