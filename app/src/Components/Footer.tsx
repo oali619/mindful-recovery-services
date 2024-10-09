@@ -74,15 +74,6 @@ export default function Footer2() {
 							<li className='mt-3'>
 								<a
 									className='border-b-2 border-transparent hocus:text-gray-300 hocus:border-gray-100 pb-1 transition duration-300'
-									href='https://gentleheartsservices.org/'
-									target='_blank'
-								>
-									HSS
-								</a>
-							</li>
-							<li className='mt-3'>
-								<a
-									className='border-b-2 border-transparent hocus:text-gray-300 hocus:border-gray-100 pb-1 transition duration-300'
 									href='/team'
 								>
 									Team
@@ -137,14 +128,6 @@ export default function Footer2() {
 									href='/contact'
 								>
 									Contact Form
-								</a>
-							</li>
-							<li className='mt-3'>
-								<a
-									className='border-b-2 border-transparent hocus:text-gray-300 hocus:border-gray-100 pb-1 transition duration-300'
-									href='/contact'
-								>
-									File a Complaint
 								</a>
 							</li>
 						</ul>

@@ -43,7 +43,8 @@ export default function EmailTemplate({ options, referral }) {
 					<span style={{ fontWeight: 'normal' }}> {referrerEmail}</span>
 				</h3>
 				<h3>
-					Client Name: <span style={{ fontWeight: 'normal' }}> {clientName}</span>
+					Client Name:{' '}
+					<span style={{ fontWeight: 'normal' }}> {clientName}</span>
 				</h3>
 				<h3>
 					Client DOB: <span style={{ fontWeight: 'normal' }}> {dob}</span>
@@ -53,7 +54,8 @@ export default function EmailTemplate({ options, referral }) {
 					<span style={{ fontWeight: 'normal' }}> {clientPhoneNumber}</span>
 				</h3>
 				<h3>
-					Client Email: <span style={{ fontWeight: 'normal' }}> {clientEmail}</span>
+					Client Email:{' '}
+					<span style={{ fontWeight: 'normal' }}> {clientEmail}</span>
 				</h3>
 				<h3>
 					Insurance Type:{' '}
@@ -64,8 +66,7 @@ export default function EmailTemplate({ options, referral }) {
 					<span style={{ fontWeight: 'normal' }}> {waiverType}</span>
 				</h3>
 				<h3>
-					PMI Number:{' '}
-					<span style={{ fontWeight: 'normal' }}> {pmiNumber}</span>
+					PMI Number: <span style={{ fontWeight: 'normal' }}> {pmiNumber}</span>
 				</h3>
 				<h3>
 					Client Address:{' '}
@@ -108,35 +109,18 @@ export default function EmailTemplate({ options, referral }) {
 	}
 
 	const {
-		'first-name': firstName,
-		'last-name': lastName,
-		company,
+		fullName,
 		email,
-		country,
-		'phone-number': phoneNumber,
 		message,
 	} = options;
 	return (
 		<div>
 			<h1>General Inquiry</h1>
 			<h3>
-				First Name: <span style={{ fontWeight: 'normal' }}> {firstName}</span>
-			</h3>
-			<h3>
-				Last Name: <span style={{ fontWeight: 'normal' }}> {lastName}</span>
-			</h3>
-			<h3>
-				Company: <span style={{ fontWeight: 'normal' }}> {company}</span>
+				Full Name: <span style={{ fontWeight: 'normal' }}> {fullName}</span>
 			</h3>
 			<h3>
 				E-mail: <span style={{ fontWeight: 'normal' }}> {email}</span>
-			</h3>
-			<h3>
-				Country: <span style={{ fontWeight: 'normal' }}> {country}</span>
-			</h3>
-			<h3>
-				Phone Number:{' '}
-				<span style={{ fontWeight: 'normal' }}> {phoneNumber}</span>
 			</h3>
 			<h3>
 				Message: <span style={{ fontWeight: 'normal' }}> {message}</span>
@@ -164,11 +148,7 @@ EmailTemplate.propTypes = {
 		postalcode: PropTypes.string,
 		comments: PropTypes.string,
 		// contact
-		'first-name': PropTypes.string,
-		'last-name': PropTypes.string,
-		company: PropTypes.string,
-		country: PropTypes.string,
-		'phone-number': PropTypes.string,
+		fullName: PropTypes.string,
 		message: PropTypes.string,
 	}),
 	referral: PropTypes.bool,

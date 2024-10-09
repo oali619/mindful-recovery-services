@@ -1,9 +1,43 @@
+import { useState, useEffect } from 'react';
+import { Resend } from 'resend';
+import { ActionFunctionArgs } from '@remix-run/node';
+import { useActionData } from '@remix-run/react';
+import { toast } from 'sonner';
+import EmailTemplate from '~/src/Components/EmailTemplate';
+
+export async function action({ request }: ActionFunctionArgs) {
+	const formData = await request.formData();
+	const data = Object.fromEntries(formData.entries());
+
+	const resend = new Resend(process.env.RESEND_API_KEY);
+
+	console.log({ data });
+	const response = await resend.emails.send({
+		from: 'info@mindfulrecoveryservices.org',
+		to: 'info@mindfulrecoveryservices.org',
+		subject: data.subject,
+		react: <EmailTemplate options={data} />,
+	});
+	console.log({ response });
+	return response;
+}
 import EmailIllustrationSrc from '../../images/email-illustration.svg';
 
-export default ({ formAction = '#', formMethod = 'get' }) => {
+export default () => {
+	const [emailSent, setEmailSent] = useState(false);
+	const [emailFailed, setEmailFailed] = useState(false);
+
+	const response = useActionData<typeof action>();
+	useEffect(() => {
+		response?.data?.id && setEmailSent(true);
+		response?.error && setEmailFailed(true);
+	}, [response]);
+
 	return (
 		<div>
-            <div className='mb-2 border-b border-blue-900/10' />
+			{emailSent && toast.success('Email sent successfully.')}
+			{emailFailed && toast.error('Email failed to send. Please try again.')}
+			<div className='mb-2 border-b border-blue-900/10' />
 			<div className='flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-6 md:py-4'>
 				<div className='w-full max-w-md mx-auto md:max-w-none md:mx-0 md:w-5/12 flex-shrink-0 h-80 md:h-auto'>
 					<div
@@ -21,9 +55,10 @@ export default ({ formAction = '#', formMethod = 'get' }) => {
 							</>
 						</h2>
 						<form
+							action='/'
+							method='POST'
+                            id='contact_form'
 							className='mt-8 md:mt-10 text-sm flex flex-col max-w-sm mx-auto md:mx-0'
-							action={formAction}
-							method={formMethod}
 						>
 							<input
 								className='mt-6 first:mt-0 border-b-2 py-3 focus:outline-none font-medium transition duration-300 hocus:border-primary-500'
@@ -34,7 +69,7 @@ export default ({ formAction = '#', formMethod = 'get' }) => {
 							<input
 								className='mt-6 first:mt-0 border-b-2 py-3 focus:outline-none font-medium transition duration-300 hocus:border-primary-500'
 								type='text'
-								name='name'
+								name='fullName'
 								placeholder='Full Name'
 							/>
 							<input
