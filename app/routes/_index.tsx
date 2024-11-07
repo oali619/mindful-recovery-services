@@ -42,9 +42,9 @@ export default function Index() {
 								<h1 className='text-7xl font-bold tracking-tight text-gray-900'>
 									Mindful Recovery Services
 								</h1>
-								{/* <p className='text-3xl text-right'>
-									Adult Rehabilitation Mental Health Services (ARMHS)
-								</p> */}
+								<p className='text-3xl text-right'>
+									Adult Rehabilitative Mental Health Services
+								</p>
 							</div>
 						</div>
 					</section>

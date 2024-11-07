@@ -11,7 +11,7 @@ export default function Footer2() {
 							</h5>
 						</div>
 						<p className='mt-4 max-w-xs font-medium text-sm mx-auto lg:mx-0 lg:mr-4 leading-loose text-center lg:text-left'>
-							151 Silver Lake Rd NW, Suite 110, New Brighton, MN 55112
+							151 Silver Lake Rd NW, Suite 6, New Brighton, MN 55112
 						</p>
 					</div>
 					<div className='w-1/2 md:w-1/5 mb-8 md:mb-0 text-sm sm:text-base text-center md:text-left'>
@@ -113,7 +113,7 @@ export default function Footer2() {
 					<div className='w-1/2 md:w-1/5 mb-8 md:mb-0 text-sm sm:text-base text-center md:text-left'>
 						<div className='font-bold uppercase'>Contact</div>
 						<ul className='mt-4 text-sm font-medium'>
-							<li className='mt-3'>+1 (612) 261-9312</li>
+							<li className='mt-3'>+1 (612) 685-2391</li>
 							<li className='mt-3'>
 								<a
 									className='border-b-2 border-transparent hocus:text-gray-300 hocus:border-gray-100 pb-1 transition duration-300'
