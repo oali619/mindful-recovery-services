@@ -119,7 +119,7 @@ export default function Footer2() {
 									className='border-b-2 border-transparent hocus:text-gray-300 hocus:border-gray-100 pb-1 transition duration-300'
 									href='mailto:contact@mindfulhealthmn.org'
 								>
-									contact@mindfulrecoveryservices.org
+									info@mindfulrecoveryservices.org
 								</a>
 							</li>
 							<li className='mt-3'>
