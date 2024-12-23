@@ -78,7 +78,7 @@ export const testimonials = [
 		quote:
 			'I can’t thank Mindful Recovery Services enough for their help during one of the toughest times in my life. They provided me with the tools and support to find stable housing, and they were always there to answer my questions and guide me through the process. The level of care and dedication they showed made all the difference in turning my situation around.',
 		customerName: 'Anonymous Client',
-		customerLocation: 'St. Paol, MN',
+		customerLocation: 'St. Paul, MN',
 	},
 	{
 		profileImageSrc:
@@ -178,19 +178,19 @@ export const employees = [
 	{
 		name: 'Abdirizak Ismail',
 		role: 'Director',
-		location: 'Greater Minneapolis/St. Paol',
+		location: 'Greater Minneapolis/St. Paul',
 		img: 'https://tailwindui.com/plus/img/logos/mark.svg?color=blue&shade=600',
 	},
 	{
 		name: 'Mohamed Muhumed',
-		role: 'Program Manager',
-		location: 'Greater Minneapolis/St. Paol',
+		role: 'Program Director',
+		location: 'Greater Minneapolis/St. Paul',
 		img: 'https://tailwindui.com/plus/img/logos/mark.svg?color=blue&shade=600',
 	},
 	{
 		name: 'Shannon Lowe, LICSW',
 		role: 'Clinical Supervisor',
-		location: 'Greater Minneapolis/St. Paol',
+		location: 'Greater Minneapolis/St. Paul',
 		img: 'https://tailwindui.com/plus/img/logos/mark.svg?color=blue&shade=600',
 	},
 ];
